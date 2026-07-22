@@ -7,17 +7,16 @@
       name="description"
       content="Móveis planejados, fabricação e vendas em Ubajara - CE."
     />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self'; img-src 'self' data: blob: https://www.google-analytics.com https://*.google-analytics.com https://*.g.doubleclick.net; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com; media-src 'self' blob:; form-action 'self'; upgrade-insecure-requests"
+    />
     <title>GiMoveis | Móveis Planejados</title>
     <link rel="icon" type="image/jpeg" href="assets/logogi.jpg" />
+    <link rel="preload" href="style.css" as="style" />
+    <link rel="preload" href="assets/logogi.jpg" as="image" fetchpriority="high" />
     <link rel="stylesheet" href="style.css" />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-80QS25QXL6"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-80QS25QXL6');
-    </script>
+    <script defer src="assets/analytics.js"></script>
   </head>
   <body>
     <header class="site-header" data-header>
@@ -50,7 +49,7 @@
           class="icon-link"
           href="https://wa.me/5588993548297?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%21%21"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           aria-label="WhatsApp"
         >
           <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -61,7 +60,7 @@
           class="icon-link"
           href="https://www.instagram.com/gi.moveis"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           aria-label="Instagram"
         >
           <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -81,7 +80,7 @@
             aos detalhes.
           </p>
           <div class="hero-actions">
-            <a class="btn primary" href="https://wa.me/5588993548297?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%21%21" target="_blank" rel="noopener">
+            <a class="btn primary" href="https://wa.me/5588993548297?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%21%21" target="_blank" rel="noopener noreferrer">
               Solicitar orçamento
             </a>
             <a class="btn secondary" href="#galeria">Ver Projetos</a>
@@ -145,7 +144,7 @@
           <article class="gallery-card reveal" data-gallery='["assets/movel1.jpeg","assets/movel1.1.jpeg","assets/movel1.2.jpeg"]'>
             <div class="gallery-media">
               <button class="gallery-open" type="button" aria-label="Ampliar Mesa de centro" data-gallery-open>
-                <img class="gallery-image" src="assets/movel1.jpeg" alt="Sala planejada com estante iluminada" />
+                <img class="gallery-image" src="assets/movel1.jpeg" alt="Sala planejada com estante iluminada" loading="lazy" decoding="async" />
               </button>
               <button class="gallery-nav gallery-prev" type="button" aria-label="Imagem anterior" data-carousel-prev>
                 <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -164,7 +163,7 @@
           <article class="gallery-card reveal" data-gallery='["assets/movel2.jpeg","assets/movel2.1.jpeg"]'>
             <div class="gallery-media">
               <button class="gallery-open" type="button" aria-label="Ampliar Escritorio planejado" data-gallery-open>
-                <img class="gallery-image" src="assets/movel2.jpeg" alt="Escritorio planejado com bancada e painel" />
+                <img class="gallery-image" src="assets/movel2.jpeg" alt="Escritorio planejado com bancada e painel" loading="lazy" decoding="async" />
               </button>
               <button class="gallery-nav gallery-prev" type="button" aria-label="Imagem anterior" data-carousel-prev>
                 <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -183,7 +182,7 @@
           <article class="gallery-card reveal" data-gallery='["assets/movel3.jpeg"]'>
             <div class="gallery-media">
               <button class="gallery-open" type="button" aria-label="Ampliar Guarda-roupa planejado" data-gallery-open>
-                <img class="gallery-image" src="assets/movel3.jpeg" alt="Guarda-roupa planejado aberto" />
+                <img class="gallery-image" src="assets/movel3.jpeg" alt="Guarda-roupa planejado aberto" loading="lazy" decoding="async" />
               </button>
             </div>
             <p>Guarda-roupa planejado</p>
@@ -191,7 +190,7 @@
           <article class="gallery-card reveal" data-gallery='["assets/movel4.jpeg"]'>
             <div class="gallery-media">
               <button class="gallery-open" type="button" aria-label="Ampliar Banheiro planejado" data-gallery-open>
-                <img class="gallery-image" src="assets/movel4.jpeg" alt="Banheiro planejado com armario e bancada" />
+                <img class="gallery-image" src="assets/movel4.jpeg" alt="Banheiro planejado com armario e bancada" loading="lazy" decoding="async" />
               </button>
             </div>
             <p>Banheiro planejado</p>
@@ -199,7 +198,7 @@
           <article class="gallery-card reveal" data-gallery='["assets/movel5.jpeg"]'>
             <div class="gallery-media">
               <button class="gallery-open" type="button" aria-label="Ampliar Closet iluminado" data-gallery-open>
-                <img class="gallery-image" src="assets/movel5.jpeg" alt="Closet planejado com iluminacao" />
+                <img class="gallery-image" src="assets/movel5.jpeg" alt="Closet planejado com iluminacao" loading="lazy" decoding="async" />
               </button>
             </div>
             <p>Closet iluminado</p>
@@ -207,7 +206,7 @@
           <article class="gallery-card reveal" data-gallery='["assets/movel6.jpeg"]'>
             <div class="gallery-media">
               <button class="gallery-open" type="button" aria-label="Ampliar Armarios planejados" data-gallery-open>
-                <img class="gallery-image" src="assets/movel6.jpeg" alt="Armario planejado com portas de vidro" />
+                <img class="gallery-image" src="assets/movel6.jpeg" alt="Armario planejado com portas de vidro" loading="lazy" decoding="async" />
               </button>
             </div>
             <p>Armários planejados</p>
@@ -215,7 +214,7 @@
           <article class="gallery-card reveal" data-gallery='["assets/movel7.jpeg","assets/movel7.1.jpeg","assets/movel7.2.jpeg"]'>
             <div class="gallery-media">
               <button class="gallery-open" type="button" aria-label="Ampliar Painel de TV planejado" data-gallery-open>
-                <img class="gallery-image" src="assets/movel7.jpeg" alt="Painel de TV planejado para sala" />
+                <img class="gallery-image" src="assets/movel7.jpeg" alt="Painel de TV planejado para sala" loading="lazy" decoding="async" />
               </button>
               <button class="gallery-nav gallery-prev" type="button" aria-label="Imagem anterior" data-carousel-prev>
                 <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -234,7 +233,7 @@
           <article class="gallery-card reveal" data-gallery='["assets/movel8.jpeg","assets/movel8.1.jpeg"]'>
             <div class="gallery-media">
               <button class="gallery-open" type="button" aria-label="Ampliar Cozinha planejada" data-gallery-open>
-                <img class="gallery-image" src="assets/movel8.jpeg" alt="Cozinha planejada com bancada" />
+                <img class="gallery-image" src="assets/movel8.jpeg" alt="Cozinha planejada com bancada" loading="lazy" decoding="async" />
               </button>
               <button class="gallery-nav gallery-prev" type="button" aria-label="Imagem anterior" data-carousel-prev>
                 <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -327,17 +326,17 @@
           </div>
 
           <div class="contact-actions">
-            <a class="btn primary" href="https://wa.me/5588993548297?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%21%21" target="_blank" rel="noopener">
+            <a class="btn primary" href="https://wa.me/5588993548297?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%21%21" target="_blank" rel="noopener noreferrer">
               WhatsApp
             </a>
-            <a class="btn secondary" href="https://www.instagram.com/gi.moveis" target="_blank" rel="noopener">
+            <a class="btn secondary" href="https://www.instagram.com/gi.moveis" target="_blank" rel="noopener noreferrer">
               Instagram
             </a>
             <a
               class="btn secondary"
               href="https://maps.app.goo.gl/6zYixrEYZk5m8KF69"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               Ver localização
             </a>
@@ -347,17 +346,17 @@
     </main>
 
     <footer class="site-footer">
-      <img src="assets/logogi.jpg" alt="Logo GiMoveis" />
+      <img src="assets/logogi.jpg" alt="Logo GiMoveis" loading="lazy" decoding="async" />
       <p>Projetos, fabricação e vendas</p>
       <small>© 2026 GiMoveis</small>
-      <small><a href="https://www.linkedin.com/in/leonardo-henrique-chaves-monteiro/" target="_blank" rel="noopener">Desenvolvido por Leonardo Henrique (LinkedIn)</a></small>
+      <small><a href="https://www.instagram.com/leo.chavesz" target="_blank" rel="noopener noreferrer">Desenvolvido por Leonardo Henrique</a></small>
     </footer>
 
     <a
       class="whatsapp-float"
       href="https://wa.me/5588993548297?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%21%21"
       target="_blank"
-      rel="noopener"
+      rel="noopener noreferrer"
       aria-label="Abrir conversa no WhatsApp"
     >
       <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -365,6 +364,6 @@
       </svg>
     </a>
 
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
   </body>
 </html>

@@ -8,6 +8,7 @@ const sections = document.querySelectorAll("main section[id]");
 const galleryCards = document.querySelectorAll("[data-gallery]");
 const lightbox = document.querySelector("[data-lightbox]");
 const lightboxImage = document.querySelector("[data-lightbox-image]");
+const mediaElements = document.querySelectorAll("img, video");
 const lightboxCount = document.querySelector("[data-lightbox-count]");
 const lightboxClose = document.querySelector("[data-lightbox-close]");
 const lightboxPrev = document.querySelector("[data-lightbox-prev]");
@@ -19,6 +20,19 @@ let activeLightboxIndex = 0;
 
 const updateHeader = () => {
   header.classList.toggle("is-scrolled", window.scrollY > 12);
+};
+
+const protectMediaFromDownload = () => {
+  mediaElements.forEach((element) => {
+    element.setAttribute("draggable", "false");
+    element.addEventListener("contextmenu", (event) => event.preventDefault());
+    element.addEventListener("dragstart", (event) => event.preventDefault());
+    element.addEventListener("mousedown", (event) => {
+      if (event.button === 2) {
+        event.preventDefault();
+      }
+    });
+  });
 };
 
 const getHashTarget = (hash) => {
@@ -233,4 +247,5 @@ window.addEventListener("popstate", () => {
     scrollToSection(target, false);
   }
 });
+protectMediaFromDownload();
 updateHeader();
